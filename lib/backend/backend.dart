@@ -60,6 +60,7 @@ Future maybeCreateUser(User user) async {
 
   final userData = createUsersRecordData(
     email: user.email,
+    
     displayName: user.displayName,
     photoUrl: user.photoURL,
     uid: user.uid,

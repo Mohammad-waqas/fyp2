@@ -3,11 +3,14 @@ import 'package:get/get.dart';
 import 'package:sortie/services/get_controller.dart';
 import 'package:sortie/ui/my_classes.dart';
 import 'package:sortie/ui/reminder_screen.dart';
+import 'package:sortie/viewControllers/notebookHome.dart';
 
 import '../dashboard/dashboard_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../my_profile/my_profile_widget.dart';
 import '../my_tasks/my_tasks_widget.dart';
+import '../Schedule_Finder/schedule_finder_widget.dart';
+
 
 class HomepageWidget extends StatefulWidget {
   HomepageWidget({Key key}) : super(key: key);
@@ -99,6 +102,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                     scrollDirection: Axis.vertical,
                     children: [
                       InkWell(
+                        /*
                         onTap: () async {
                           Get.to(MyClasses());
                           // await Navigator.push(
@@ -107,6 +111,15 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                           //     builder: (context) => ManualSchedWidget(),
                           //   ),
                           // );
+                        },
+                        */
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => scheduleFinder(),
+                            ),
+                          );
                         },
                         child: Container(
                           width: 100,
@@ -187,8 +200,17 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                           ),
                         ),
                       ),
+                      
                       InkWell(
-                        onTap: () {},
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NotebookHomePage(),
+                              
+                            ),
+                          );
+                        },
                         child: Container(
                           width: 100,
                           height: 100,

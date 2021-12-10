@@ -7,6 +7,7 @@ import 'package:sortie/services/get_controller.dart';
 import 'package:sortie/services/notification_service.dart';
 import 'package:sortie/splash_screen/splash_screen_widget.dart';
 
+    
 import 'auth/firebase_user_provider.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
